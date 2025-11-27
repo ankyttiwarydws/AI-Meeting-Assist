@@ -1,0 +1,19 @@
+
+# config.yaml - choose backend and runtime settings
+llm_backend: lmstudio # or 'ollama'
+ollama_url: http://localhost:11434
+lmstudio_url: http://localhost:1234
+llm_model: Phi-3-mini-4k-instruct-gguf/Phi-3-mini-4k-instruct-q4.gguf
+whisper_model: small
+gpu: false  # Set to false if CUDA/cuDNN errors occur - will use CPU instead
+silence_seconds: 2.0
+llm_max_tokens: 200
+llm_temperature: 0.2
+audio_device_index: 1  # Stereo Mix (Realtek(R) Audio) - MME [DEFAULT INPUT]
+audio_samplerate: 44100
+audio_chunk_seconds: 3.0
+log_level: INFO
+# Transcription filters to prevent false positives
+min_audio_level: 0.005  # Minimum RMS level to transcribe (0.005 = quiet, 0.01 = normal, 0.02 = loud)
+min_language_probability: 0.5  # Minimum language detection confidence (0.0-1.0)
+min_transcription_length: 3  # Minimum characters in transcription to keep

@@ -1,0 +1,10 @@
+
+# core
+sounddevice
+numpy
+PySide6
+requests
+PyYAML
+# faster-whisper is required on the target machine (windows) with GPU: install per instructions
+# faster-whisper may need to be installed via pip on your Windows machine (not in Colab):
+# pip install faster-whisper
